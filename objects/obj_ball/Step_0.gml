@@ -26,11 +26,3 @@ z=arc(0,height,0,timer/length,.8);
 shadow_alpha=lerp(shadow_alpha_max,shadow_alpha_min,z/32);
 shadow_scale=lerp(shadow_scale_max,shadow_scale_min,z/32);
 
-/*
-shadow_alpha=0;
-shadow_alpha_min=.25;
-shadow_alpha_max=.5;
-shadow_scale=1;
-shadow_scale_min=.5;
-shadow_scale_max=1;
-*/
