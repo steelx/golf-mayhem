@@ -39,7 +39,9 @@
   },
   "resources": [
     {"id":{"name":"scr_math_functions","path":"scripts/scr_math_functions/scr_math_functions.yy",},},
+    {"id":{"name":"snd_golf_ball_hit","path":"sounds/snd_golf_ball_hit/snd_golf_ball_hit.yy",},},
     {"id":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},},
+    {"id":{"name":"snd_golf_ball_strike","path":"sounds/snd_golf_ball_strike/snd_golf_ball_strike.yy",},},
     {"id":{"name":"spr_player_left","path":"sprites/spr_player_left/spr_player_left.yy",},},
     {"id":{"name":"spr_tree1","path":"sprites/spr_tree1/spr_tree1.yy",},},
     {"id":{"name":"ball_maths","path":"scripts/ball_maths/ball_maths.yy",},},
@@ -53,6 +55,7 @@
     {"id":{"name":"obj_collision_parent","path":"objects/obj_collision_parent/obj_collision_parent.yy",},},
     {"id":{"name":"scr_collisions","path":"scripts/scr_collisions/scr_collisions.yy",},},
     {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},},
+    {"id":{"name":"snd_ball_bounce","path":"sounds/snd_ball_bounce/snd_ball_bounce.yy",},},
     {"id":{"name":"obj_tree_01","path":"objects/obj_tree_01/obj_tree_01.yy",},},
     {"id":{"name":"scr_data","path":"scripts/scr_data/scr_data.yy",},},
     {"id":{"name":"_11_Camping_16x16","path":"sprites/_11_Camping_16x16/_11_Camping_16x16.yy",},},

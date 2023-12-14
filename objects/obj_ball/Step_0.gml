@@ -1,5 +1,4 @@
 /// ball step
-
 if(timer<length)
     timer++;
 else
@@ -7,6 +6,7 @@ else
     timer=length;
     if(bounce>0)
     {
+		audio_play_sound(snd_ball_bounce, 1, false)
 	    bounce--;
 	    var _dir=point_direction(start_x,start_y,target_x,target_y);
 	    var _dist=point_distance(start_x,start_y,target_x,target_y)/2;
@@ -17,6 +17,11 @@ else
 	    length*=.75;
 	    height/=2;
 	    timer=0;
+		if (collision_check(x, y)) {
+	      show_debug_message("collided")
+		  audio_play_sound(snd_golf_ball_hit, 1, false)
+		  bounce--;
+	    }
     }
 }
 x=lerp(start_x,target_x,timer/length);
