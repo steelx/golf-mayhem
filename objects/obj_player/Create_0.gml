@@ -26,3 +26,4 @@ mask_index = spr_player_down
 
 global.players[? id] = ds_map_create()
 is_ball_in_contact = false
+ball = noone

@@ -1,7 +1,9 @@
 /// @description ball projection line
+// Draw event for obj_player
 draw_self()
 
-// Draw event for obj_player
+// ball projection line
+if (is_moving) return;
 if (mouse_check_button(mb_right)) {
     var _start_x = global.players[? id].start_x
     var _start_y = global.players[? id].start_y

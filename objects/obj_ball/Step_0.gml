@@ -20,7 +20,8 @@ else
 		if (collision_check(x, y)) {
 	      show_debug_message("collided")
 		  audio_play_sound(snd_golf_ball_hit, 1, false)
-		  bounce--;
+		  bounce = 0
+		  has_hit_someone = true
 	    }
     }
 }

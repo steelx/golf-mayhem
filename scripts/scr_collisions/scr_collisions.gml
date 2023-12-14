@@ -6,14 +6,13 @@ function collisions(_tile_x, _tile_y){
 	if (tilemap_get(_tilemap, _tile_x, _tile_y)) return true;
 	
 	
-	// Objects e.g. obj_bush_01
+	// Environmen objects e.g. obj_bush_01
 	var _x1 = to_room(_tile_x+0.5)
 	var _y1 = to_room(_tile_y+0.5)
-	
 	if (place_meeting(_x1, _y1, obj_collision_parent)) return true;
 	
 	// NPCs
-	if (place_meeting(_x1, _y1, obj_npc_parent)) return true;
+	if (position_meeting(_x1, _y1, obj_npc_parent)) return true;
 	
 	return false
 }
