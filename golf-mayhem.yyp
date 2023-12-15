@@ -55,6 +55,7 @@
     {"id":{"name":"obj_collision_parent","path":"objects/obj_collision_parent/obj_collision_parent.yy",},},
     {"id":{"name":"scr_collisions","path":"scripts/scr_collisions/scr_collisions.yy",},},
     {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},},
+    {"id":{"name":"spr_corner","path":"sprites/spr_corner/spr_corner.yy",},},
     {"id":{"name":"snd_ball_bounce","path":"sounds/snd_ball_bounce/snd_ball_bounce.yy",},},
     {"id":{"name":"obj_tree_01","path":"objects/obj_tree_01/obj_tree_01.yy",},},
     {"id":{"name":"scr_data","path":"scripts/scr_data/scr_data.yy",},},

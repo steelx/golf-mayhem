@@ -24,6 +24,8 @@ states = {
 state = states.idle
 mask_index = spr_player_down
 
-global.players[? id] = ds_map_create()
-is_ball_in_contact = false
-ball = noone
+selector_frame = 0
+selector_frame_max = sprite_get_number(spr_corner)
+function ball_within_hitting_radius() {
+	return (ball != noone and distance_to_object(ball) <= ball_hitting_radius)
+}

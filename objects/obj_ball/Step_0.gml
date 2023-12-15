@@ -28,7 +28,7 @@ else
 x=lerp(start_x,target_x,timer/length);
 y=lerp(start_y,target_y,timer/length);
 z=arc(0,height,0,timer/length,.8);
-    
+
 shadow_alpha=lerp(shadow_alpha_max,shadow_alpha_min,z/32);
 shadow_scale=lerp(shadow_scale_max,shadow_scale_min,z/32);
 

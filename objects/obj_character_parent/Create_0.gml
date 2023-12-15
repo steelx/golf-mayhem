@@ -12,9 +12,15 @@ target_x = 0
 target_y = 0
 state = undefined
 
+global.players[? id] = ds_map_create()
+is_ball_in_contact = false
+ball = noone
+ball_hitting_radius = 8
+ball_hitting_cooldown = 20
+
 
 // functions
-get_sprite = function (_move_dir) {	
+get_sprite = function (_move_dir) {
 	switch (_move_dir) {
 		case DOWN: return state.down;
 		case UP: return state.up;
@@ -28,7 +34,6 @@ get_sprite = function (_move_dir) {
 /// @example: set_state(state.walk)
 set_state = function (_new_state) {
 	if (state == _new_state) return;
-	
 	state = _new_state
 	image_index = 0 // reset animation frame
 };
@@ -47,7 +52,7 @@ path_point_y = 0
 /// example tile_x = to_room(5) tile_y = to_room(5)
 move_to_point = function (_target_x, _target_y) {
 	var _can_move = mp_grid_path(global.ai_grid, path, x, y, _target_x, _target_y, false)
-	
+
 	if (_can_move) {
 		//path_start(path, 1, path_action_stop, true)
 		path_next_point = 1
