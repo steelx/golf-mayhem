@@ -1,4 +1,4 @@
-/// @description obj_place step
+/// @description obj_player step
 
 // Inherit the parent event
 event_inherited();
@@ -17,31 +17,37 @@ if (ball == noone or ball_within_hitting_radius() ) {
 
 	// ball release logic
 	if (mouse_check_button_pressed(mb_right)) {
-		global.players[? id].start_x = x
-		global.players[? id].start_y = y
+		obj_room_manager.players[? id].start_x = x
+		obj_room_manager.players[? id].start_y = y
 	}
 
 	if (mouse_check_button(mb_right)) {
-		global.players[? id].end_x = mouse_x;
-		global.players[? id].end_y = mouse_y;
+		obj_room_manager.players[? id].end_x = mouse_x;
+		obj_room_manager.players[? id].end_y = mouse_y;
 	}
 
 	// Right click released for obj_player
 	if (mouse_check_button_released(mb_right)) {
 		audio_play_sound(snd_golf_ball_strike, 1, false)
 
+		var _is_players_ball = false
+		var _ball_owner_id = noone
 		if (ball != noone and instance_exists(ball)) {
 			// ball is within player's radius
-			global.players[? id].start_x = ball.x
-			global.players[? id].start_y = ball.y
+			_is_players_ball = ball.owner_id == id
+			if (not _is_players_ball) {
+				_ball_owner_id = ball.owner_id
+			}
+			obj_room_manager.players[? id].start_x = ball.x
+			obj_room_manager.players[? id].start_y = ball.y
 			instance_destroy(ball)
 			ball = noone
 		}
 
-		var _start_x = global.players[? id].start_x
-		var _start_y = global.players[? id].start_y
-		var _end_x = global.players[? id].end_x
-		var _end_y = global.players[? id].end_y
+		var _start_x = obj_room_manager.players[? id].start_x
+		var _start_y = obj_room_manager.players[? id].start_y
+		var _end_x = obj_room_manager.players[? id].end_x
+		var _end_y = obj_room_manager.players[? id].end_y
 
 		// Calculate distance and reversed direction
 		var _distance = point_distance(_start_x, _start_y, _end_x, _end_y);
@@ -56,6 +62,14 @@ if (ball == noone or ball_within_hitting_radius() ) {
 		ball.start_y = _start_y
 		ball.target_x = _target_x
 		ball.target_y = _target_y
+		_ball_owner_id = (_ball_owner_id != noone) ? _ball_owner_id : id
+		ball.owner_id = _is_players_ball ? id : _ball_owner_id
 	}
 
 }
+
+
+
+
+
+

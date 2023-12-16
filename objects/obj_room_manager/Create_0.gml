@@ -32,4 +32,5 @@ for (var _x = 0; _x < _hcells; _x++) {
 	}
 }
 
+players = ds_map_create()
 

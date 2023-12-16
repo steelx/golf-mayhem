@@ -4,14 +4,14 @@ if (dir_x != 0 || dir_y != 0) {
 	if (not is_moving) {
 		// prefer X over Y
 		if (dir_x != 0) dir_y = 0;
-		
+
 		// next position
 		var _new_tilex = to_tile(x) + dir_x
 		var _new_tiley = to_tile(y) + dir_y
-		
+
 		// Collision
 		var _has_collision = collisions(_new_tilex, _new_tiley)
-		
+
 		if (not _has_collision) {
 			target_x = to_room(_new_tilex+0.5)
 			target_y = to_room(_new_tiley+0.5)

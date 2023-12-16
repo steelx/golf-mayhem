@@ -9,6 +9,7 @@ target_y=0;
 length=game_get_speed(gamespeed_fps)/2;
 bounce=2;
 height=48;
+owner_id = noone;
 
 shadow_alpha=0;
 shadow_alpha_min=.1;

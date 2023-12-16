@@ -5,15 +5,16 @@ draw_self()
 // ball projection line
 if (is_moving) return;
 if (mouse_check_button(mb_right)) {
-    var _start_x = global.players[? id].start_x
-    var _start_y = global.players[? id].start_y
-    if (ball != noone) {
+    var _start_x = obj_room_manager.players[? id].start_x
+    var _start_y = obj_room_manager.players[? id].start_y
+	if (ball != noone and instance_exists(obj_ball)) {
         // if we are in ball hitting radius, then we set appropriate start_x and start_y
         _start_x = ball.x
         _start_y = ball.y
     }
-    var _end_x = global.players[? id].end_x
-    var _end_y = global.players[? id].end_y
+    
+    var _end_x = obj_room_manager.players[? id].end_x
+    var _end_y = obj_room_manager.players[? id].end_y
 
     var _distance = point_distance(_start_x, _start_y, _end_x, _end_y)
     var _direction = point_direction(_start_x, _start_y, _end_x, _end_y) + 180; // Add 180 to reverse the direction
@@ -35,3 +36,6 @@ if (mouse_check_button(mb_right)) {
         }
     }
 }
+
+
+

@@ -23,6 +23,7 @@
   "ResourceOrderSettings": [
     {"name":"scr_math_functions","order":3,"path":"scripts/scr_math_functions/scr_math_functions.yy",},
     {"name":"snd_golf_ball_hit","order":2,"path":"sounds/snd_golf_ball_hit/snd_golf_ball_hit.yy",},
+    {"name":"obj_golf_post","order":8,"path":"objects/obj_golf_post/obj_golf_post.yy",},
     {"name":"obj_ball","order":7,"path":"objects/obj_ball/obj_ball.yy",},
     {"name":"spr_player_left","order":2,"path":"sprites/spr_player_left/spr_player_left.yy",},
     {"name":"spr_tree1","order":1,"path":"sprites/spr_tree1/spr_tree1.yy",},
@@ -35,11 +36,12 @@
     {"name":"spr_shadow","order":4,"path":"sprites/spr_shadow/spr_shadow.yy",},
     {"name":"spr_corner","order":5,"path":"sprites/spr_corner/spr_corner.yy",},
     {"name":"snd_ball_bounce","order":1,"path":"sounds/snd_ball_bounce/snd_ball_bounce.yy",},
-    {"name":"scr_data","order":2,"path":"scripts/scr_data/scr_data.yy",},
+    {"name":"scr_global_data","order":2,"path":"scripts/scr_global_data/scr_global_data.yy",},
     {"name":"_11_Camping_16x16","order":2,"path":"sprites/_11_Camping_16x16/_11_Camping_16x16.yy",},
     {"name":"obj_npc_one","order":2,"path":"objects/obj_npc_one/obj_npc_one.yy",},
     {"name":"spr_player_down","order":1,"path":"sprites/spr_player_down/spr_player_down.yy",},
     {"name":"obj_room_manager","order":1,"path":"objects/obj_room_manager/obj_room_manager.yy",},
     {"name":"ts_camping","order":1,"path":"tilesets/ts_camping/ts_camping.yy",},
+    {"name":"spr_golf_post","order":6,"path":"sprites/spr_golf_post/spr_golf_post.yy",},
   ],
 }

@@ -26,6 +26,7 @@ mask_index = spr_player_down
 
 selector_frame = 0
 selector_frame_max = sprite_get_number(spr_corner)
+
 function ball_within_hitting_radius() {
-	return (ball != noone and distance_to_object(ball) <= ball_hitting_radius)
+	return (instance_exists(obj_ball) and ball != noone and distance_to_object(ball) <= ball_hitting_radius)
 }
