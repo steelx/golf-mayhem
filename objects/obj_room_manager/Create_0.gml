@@ -11,6 +11,10 @@ view_visible[0] = true
 // Assign camera to view [0]
 view_set_camera(0, camera)
 
+// room vars
+players = ds_map_create()
+
+
 // tilemap
 collision_tiles = layer_tilemap_get_id("tiles_buildings")
 
@@ -32,5 +36,4 @@ for (var _x = 0; _x < _hcells; _x++) {
 	}
 }
 
-players = ds_map_create()
 

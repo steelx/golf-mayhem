@@ -13,7 +13,14 @@ target_y = 0
 state = undefined
 
 // golf ball vars
-obj_room_manager.players[? id] = ds_map_create()
+obj_room_manager.players[? id] = {
+	start_x: -1,
+	start_y: -1,
+	score: -1,
+	target_x: -1,
+	target_y: -1,
+	ball_id: -1
+}
 is_ball_in_contact = false
 ball = noone
 ball_hitting_radius = 8
