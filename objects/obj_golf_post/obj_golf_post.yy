@@ -33,6 +33,9 @@
     "name": "spr_golf_post",
     "path": "sprites/spr_golf_post/spr_golf_post.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_golf_post",
+    "path": "sprites/spr_golf_post/spr_golf_post.yy",
+  },
   "visible": true,
 }

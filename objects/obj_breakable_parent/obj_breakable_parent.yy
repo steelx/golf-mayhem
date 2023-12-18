@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_golf_bat",
+  "name": "obj_breakable_parent",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -10,10 +10,13 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "environmnet",
+    "path": "folders/Objects/environmnet.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_collision_parent",
+    "path": "objects/obj_collision_parent/obj_collision_parent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -27,12 +30,12 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_health","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"4","varType":1,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_healthbar_height","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"3","varType":1,},
+  ],
   "solid": false,
-  "spriteId": {
-    "name": "spr_golfbat",
-    "path": "sprites/spr_golfbat/spr_golfbat.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

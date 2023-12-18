@@ -36,5 +36,5 @@ function ball_within_hitting_radius() {
 
 
 function collectible_within_radius() {
-	return (instance_exists(obj_collectibe) and distance_to_object(obj_collectibe) <= ball_hitting_radius)
+	return (instance_exists(obj_collectible_parent) and distance_to_object(obj_collectible_parent) <= ball_hitting_radius)
 }

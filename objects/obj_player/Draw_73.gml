@@ -6,10 +6,11 @@ if (instance_exists(obj_ball) and ball_within_hitting_radius()) {
         // draw spr_corner around ball bounding box
 		var _is_players_ball = other.id == owner_id
 		var _color = _is_players_ball ? c_blue : c_red
-        draw_sprite_ext(spr_corner, other.selector_frame, bbox_left, bbox_top, 1, 1, 0, _color, 1);
-        draw_sprite_ext(spr_corner, other.selector_frame, bbox_right, bbox_top, 1, 1, -90, _color, 1);
-        draw_sprite_ext(spr_corner, other.selector_frame, bbox_right, bbox_bottom, 1, 1, 180, _color, 1);
-        draw_sprite_ext(spr_corner, other.selector_frame, bbox_left, bbox_bottom, 1, 1, 90, _color, 1);
+		var _sprite = global.items_sprite[ITEM.CORNER]
+        draw_sprite_ext(_sprite, other.selector_frame, bbox_left, bbox_top, 1, 1, 0, _color, 1);
+        draw_sprite_ext(_sprite, other.selector_frame, bbox_right, bbox_top, 1, 1, -90, _color, 1);
+        draw_sprite_ext(_sprite, other.selector_frame, bbox_right, bbox_bottom, 1, 1, 180, _color, 1);
+        draw_sprite_ext(_sprite, other.selector_frame, bbox_left, bbox_bottom, 1, 1, 90, _color, 1);
     }
 
     // Animation

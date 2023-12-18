@@ -18,10 +18,14 @@ if (not is_moving) {
 }
 
 // player is standing on his ball then we continue
-if (ball == noone or ball_within_hitting_radius() ) {
-
+if (ball == noone or ball_within_hitting_radius()) {
 	// ball release logic
-	if (mouse_check_button_pressed(mb_right)) {
+	if (ball != noone and mouse_check_button_pressed(mb_right)) {
+		if (place_meeting(mouse_x, mouse_y, ball)) {
+			obj_room_manager.players[? id].start_x = ball.x
+			obj_room_manager.players[? id].start_y = ball.y
+		}
+	} else if (ball == noone and mouse_check_button_pressed(mb_right)) {
 		obj_room_manager.players[? id].start_x = x
 		obj_room_manager.players[? id].start_y = y
 	}
@@ -29,6 +33,12 @@ if (ball == noone or ball_within_hitting_radius() ) {
 	if (mouse_check_button(mb_right)) {
 		obj_room_manager.players[? id].end_x = mouse_x;
 		obj_room_manager.players[? id].end_y = mouse_y;
+		// player face to mouse
+		move_direction = point_direction(
+			obj_room_manager.players[? id].start_x,
+			obj_room_manager.players[? id].start_y,
+			mouse_x, mouse_x
+		) + 180;// 180 to reverse the direction
 	}
 
 	// Right click released for obj_player
@@ -43,8 +53,6 @@ if (ball == noone or ball_within_hitting_radius() ) {
 			if (not _is_players_ball) {
 				_ball_owner_id = ball.owner_id
 			}
-			obj_room_manager.players[? id].start_x = ball.x
-			obj_room_manager.players[? id].start_y = ball.y
 			instance_destroy(ball)
 			ball = noone
 		}

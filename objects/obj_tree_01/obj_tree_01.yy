@@ -2,7 +2,9 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_tree_01",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -10,8 +12,8 @@
     "path": "folders/Objects/environmnet.yy",
   },
   "parentObjectId": {
-    "name": "obj_collision_parent",
-    "path": "objects/obj_collision_parent/obj_collision_parent.yy",
+    "name": "obj_breakable_parent",
+    "path": "objects/obj_breakable_parent/obj_breakable_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -32,6 +34,9 @@
     "name": "spr_tree1",
     "path": "sprites/spr_tree1/spr_tree1.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_tree1",
+    "path": "sprites/spr_tree1/spr_tree1.yy",
+  },
   "visible": true,
 }

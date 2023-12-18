@@ -1,7 +1,7 @@
 global.resolution = {
-	width: 480,
-	height: 320,
-	scale: 3
+	width: 720,
+	height: 480,
+	scale: 2
 }
 
 var _w = global.resolution.width*global.resolution.scale
