@@ -59,8 +59,8 @@ if (ball == noone or ball_within_hitting_radius()) {
 
 		var _start_x = obj_room_manager.players[? id].start_x
 		var _start_y = obj_room_manager.players[? id].start_y
-		var _end_x = obj_room_manager.players[? id].end_x
-		var _end_y = obj_room_manager.players[? id].end_y
+		var _end_x = obj_room_manager.players[? id].end_x ?? 0
+		var _end_y = obj_room_manager.players[? id].end_y ?? 0
 
 		// Calculate distance and reversed direction
 		var _distance = point_distance(_start_x, _start_y, _end_x, _end_y);
@@ -69,12 +69,13 @@ if (ball == noone or ball_within_hitting_radius()) {
 		// Apply new direction to target position
 		var _target_x = _start_x + lengthdir_x(_distance, _direction);
 		var _target_y = _start_y + lengthdir_y(_distance, _direction);
-
+		
 		ball = (ball == noone) ? instance_create_layer(_start_x, _start_y, "Instances", obj_ball) : ball
 		ball.start_x = _start_x
 		ball.start_y = _start_y
-		ball.target_x = _target_x
-		ball.target_y = _target_y
+		var _landing_xy = ball.random_point_in_circle(_target_x, _target_y, 16)
+		ball.target_x = _landing_xy[0]
+		ball.target_y = _landing_xy[1]
 		_ball_owner_id = (_ball_owner_id != noone) ? _ball_owner_id : id
 		ball.owner_id = _is_players_ball ? id : _ball_owner_id
 	}

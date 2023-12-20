@@ -16,6 +16,8 @@ state = undefined
 obj_room_manager.players[? id] = {
 	start_x: -1,
 	start_y: -1,
+	end_x: -1,
+	end_y: -1,
 	score: 0,
 	target_x: -1,
 	target_y: -1,
