@@ -24,7 +24,8 @@ var _vcells = room_height div TILESIZE;
 //show_message("Cell at (" + string(_hcells) + ", " + string(_vcells) + ")");
 
 global.ai_grid = mp_grid_create(0, 0, _hcells, _vcells, TILESIZE, TILESIZE)
-mp_grid_add_instances(global.ai_grid, obj_collision_parent, false)
+// removed obj_collision_parent from here since we are already checking Collisions at scr_collisions
+//mp_grid_add_instances(global.ai_grid, obj_collision_parent, false)
 
 
 // add each tile x, tile y collision_tiles to grid, e.g. buildings
